@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>따릉이</title>
+		<link rel="shortcut icon" href="/img/bike_favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/img/bike_favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./css/jquery.bxslider.css">
+
+		<script src="./js/prefixfree.min.js"></script>
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script src="./js/jquery-migrate-3.3.2.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script src="./js/jquery.bxslider.min.js"></script>
+		<script src="./js/jquery.mousewheel.min.js"></script>
+		<script src="./js/main.js"></script>
+
+
+	</head>
+	<body>
+		<!---헤더부분 시작-------------------->
+		<div id="header">
+
+			<!--헤드 배너-->
+			<div class="headBanner">
+				<div class="wrapper">
+					<div>
+						<a href="#"><img src="./img/banner.png" alt="헤드배너이미지"></a>
+						<div><i class="fa fa-times" aria-hidden="true"></i></div><!--close버튼-->
+						<div>
+							<input type="checkbox" name="">
+							<div>하루 동안 보지않기</div>
+						</div><!--하루동안안보기-->
+					</div>
+				</div><!--wrapper-->
+			</div><!--헤드배너-->
+
+			<!--lnb & 팝업창-->
+			<div>
+				<div class="wrapper">
+					<ul class="lnb clearfix">
+						<li><a href="./login/index.html">LOGIN</a></li><!--메뉴1-->
+						<li><a href="#">MYPAGE</a></li><!--메뉴2-->
+					</ul><!--lnb-->
+					<div id="popup">
+						<div><a href="#"><img src="./img/popup.png" alt="새로운따릉이 소개 팝업"></a></div><!--contents-->
+						<div>
+							<input type="checkbox" name="">
+							<div>하루 동안 보지않기</div>
+						</div><!--하루동안안보기-->
+						<div><i class="fa fa-times" aria-hidden="true"></i></div><!--close버튼-->
+					</div><!--popup-->
+				</div><!--wrapper-->
+			</div><!--lnb-->
+
+			<!--로고-->
+			<div>
+				<div class="wrapper">
+					<h1>따릉이</h1>
+					<div><a href="#"><img src="./img/logo2.png" alt="따릉이로고"></a></div>
+				</div><!--wrapper-->
+			</div><!--로고-->
+
+			<!--gnb & 검색창-->
+			<div id="gnb">
+				<div class="wrapper">
+					<div><i class="fa fa-bars" aria-hidden="true"></i></div><!--btn-->
+					<div>
+						<!--form에 감싸져있어야함-->
+						<input type="text" value="대여소 검색" class="search">
+						<div><i class="fa fa-search" aria-hidden="true"></i></div>
+					</div><!--search-->
+				</div><!--wrapper-->
+			</div><!--gnb-->
+		</div><!--헤더 끝!  -->
+
+
+		<!--메인슬라이더-->
+		<div id="slider">
+				<div class="bxslider">
+					<div>
+						<img src="./img/banner1.png">
+						<span>새로워진 따릉이 보러가기</span>
+					</div><!--1번슬라이드-->
+					<div>
+						<img src="./img/banner2.png">
+					</div><!--2번슬라이드-->
+				</div>
+
+		</div><!--슬라이더-->
+
+
+		<div id="mini">
+			<div class="wrapper">
+				<div class="clearfix">
+					<div><span>이용권구매</span></div>
+					<div><span>대여소현황</span></div>
+					<div><span>대여하기</span></div>
+					<div><span>반납하기</span></div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--탭 콘텐츠-->
+		<div>
+			<div id="content5">
+				<div class="wrapper">
+					<ul>
+						<ul><img src="./img/iicon.png"></ul>
+						<h2>따릉이 이용 TIP</h2>
+					</ul>
+					<div>
+						<div>
+							<ul id="tabs-nav">
+								<li><a href="#work01" class="active">QR따릉이는</a></li><!--버튼1-->
+								<li><a href="#work02">QR대여하기</a></li><!--버튼2-->
+								<li><a href="#work03">QR반납하기</a></li><!--버튼3-->
+							</ul>
+						</div><!--버튼-->
+						<div class="tab_box">
+							<div id="work01" class="tabs-panel"><img src="./img/tab1.png" alt="신규따릉이이용방법"></div><!--콘텐츠1-->
+							<div id="work02" class="tabs-panel"><img src="./img/tab2.png" alt="따릉이대여방법"></div><!--콘텐츠2-->
+							<div id="work03" class="tabs-panel"><img src="./img/tab3.png" alt="따릉이반납방법"></div><!--콘텐츠3-->
+						</div><!--콘텐츠-->
+					</div>
+				</div><!--wrapper-->
+			</div>
+		</div><!--tab content5-->
+
+
+   <!--width:100%; 변칙 콘텐츠-->
+		<div id="content3">
+			<div class="wrapper clearfix">
+				<!--box1시작-->
+				<div>
+					<div>
+						<img src="./img/3con.png" alt="따릉이사진">
+						<div></div>
+						<div>
+							<span>녹색 성장 선도 도시</span><br>
+							<span>"저탄소 녹색성장 실현"</span>
+						</div>
+					</div>
+				</div>
+				<!--box1끝-->
+				<!--box2시작-->
+				<div>
+					<div>
+						<img src="./img/3con2.png" alt="따릉이사진">
+						<div></div>
+						<div>
+							<span>건강한 자전거도시</span><br>
+							<span>"시민건강 증진 실현"</span>
+						</div>
+					</div>
+				</div>
+				<!--box2끝-->
+			</div><!--wrapper-->
+		</div><!--content3-->
+
+
+		<!--NEWS-->
+		<div id="content1">
+			<div class="wrapper100">
+				<div>
+					<div><img src="./img/iicon.png"></div>
+					<h2>따르릉 NEWS</h2>
+				</div>
+				<div></div><!--연두색배경박스-->
+			</div>
+
+			<div class="wrapper clearfix">
+				<div>
+					<div>
+						<span>따릉이 '보이는  상담'<br>시범 실시</span><br>
+						<span><i class="fa fa-long-arrow-right" aria-hidden="true"></i><br>보러가기</span>
+						<span class="bg"></span>
+					</div><!--1번째박스-->
+					<div>
+						<span>3년 연속...<br>서울시민이 뽑은 1위 정책은 '따릉이'</span><br>
+						<span><i class="fa fa-long-arrow-right" aria-hidden="true"></i><br>보러가기</span>
+						<span class="bg"></span>
+					</div><!--2번째박스-->
+					<div>
+						<span>따릉이 제로페이 <br>이벤트 연장 안내</span><br>
+						<span><i class="fa fa-long-arrow-right" aria-hidden="true"></i><br>보러가기</span>
+						<span class="bg"></span>
+					</div><!--3번째박스-->
+				</div>
+			</div><!--wrapper-->
+		</div><!--콘텐츠1-->
+
+
+		<!--image attachment-->
+		<div id="content6">
+			<div class="wrapper100">
+				<div></div><!--이미지-->
+				<div>
+					<div>
+						<div><span>따릉이 타기 좋은 서울 자전거명소 보러가기 click!</span></div><div><img src="./img/arrow.png" alt="화살표"></div>
+						<div class="bicycle"><img src="./img/icon2.png" alt="따릉이"></div><!--움직이는자전거-->
+					</div><!--wrapper용-->
+				</div><!--검은색투명박스-->
+			</div>
+		</div>
+
+
+		<!--유튜브 영상-->
+		<div id="content4">
+			<div class="wrapper">
+				<ul>
+					<ul><img src="./img/iicon.png"></ul>
+					<h2>따릉이 TV</h2>
+				</ul>
+				<div>
+					<div><iframe width="882" height="496" src="https://www.youtube.com/embed/7MD29MXASxc?mute=1&autoplay=1&loop=1&playlist=7MD29MXASxc,PLJqpSqdKn36ofXkQPqa-q9J6r-X6L5OmE&list=PLJqpSqdKn36ofXkQPqa-q9J6r-X6L5OmE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+					<!--영상소스+?변수값mute=1&autoplay=1&loop=1&playlist=처음재생되는 영상이름&list=재생목록리스트이름-->
+				</div>
+			</div><!--wrapper-->
+		</div><!--유튜브영상연결-->
+
+
+		<!--인스타그램(wrapper100%)-->
+		<div id="content2">
+			<div class="wrapper">
+				<ul>
+					<ul><img src="./img/iicon.png"></ul>
+					<h2>#따릉이와 함께</h2>
+				</ul>
+
+				<div>
+					<div class="clearfix insta_bxslider">
+						<div>
+							<div>
+								<img src="./img/insta1.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 95</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 45</span>
+							</div><!--텍스트-->
+						</div><!--인스타1-->
+						<div>
+							<div>
+								<img src="./img/insta5.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 38</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 12</span>
+							</div><!--텍스트-->
+						</div><!--인스타2-->
+						<div>
+							<div>
+								<img src="./img/insta2.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 38</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 12</span>
+							</div><!--텍스트-->
+						</div><!--인스타3-->
+						<div>
+							<div>
+								<img src="./img/insta6.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 38</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 12</span>
+							</div><!--텍스트-->
+						</div><!--인스타4-->
+						<div>
+							<div>
+								<img src="./img/insta3.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 38</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 12</span>
+							</div><!--텍스트-->
+						</div><!--인스타5-->
+						<div>
+							<div>
+								<img src="./img/insta7.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 67</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 23</span>
+							</div><!--텍스트-->
+						</div><!--인스타6-->
+						<div>
+							<div>
+								<img src="./img/insta4.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 38</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 12</span>
+							</div><!--텍스트-->
+						</div><!--인스타7-->
+						<div>
+							<div>
+								<img src="./img/insta8.png" alt="인스타그램 사진">
+							</div><!--img-->
+							<div>
+								<span><i class="fa fa-heart" aria-hidden="true"></i> 193</span>&nbsp;&nbsp;&nbsp;
+								<span><i class="fa fa-comment" aria-hidden="true"></i> 63</span>
+							</div><!--텍스트-->
+						</div><!--인스타8-->
+					</div><!--인스타그룹-->
+				</div>
+			</div><!--wrapper-->
+		</div><!--content2-->
+
+
+		<!--aisde (aisde배치지만 gnb로 활용예정)-->
+		<div id="aside"><!--aside는 푸터앞에-->
+			<div><i class="fa fa-times" aria-hidden="true"></i></div><!--close btn-->
+			<div></div><!--따릉이로고-->
+			<div>
+				<ul>
+					<li>
+						<a href="#">따릉이 이용하기</a>
+						<ul>
+							<li><a href="#">이용권 구매</a></li>
+							<li><a href="#">대여소 찾기</a></li>
+							<li><a href="#">대여하기</a></li>
+							<li><a href="#">반납하기</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">MY 따릉이</a>
+						<ul>
+							<li><a href="#">결제관리</a></li>
+							<li><a href="#">이용내역</a></li>
+							<li><a href="#">정기권관리</a></li>
+							<li><a href="#">환승마일리지</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Q & A</a></li>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">안전수칙</a></li>
+				</ul><!-- Group-->
+			</div>
+			<div></div>
+
+			<ul class="clearfix">
+				<li><span>고장신고</span></li>
+				<li><span>방치신고</span></li>
+			</ul>
+
+			<div></div>
+		</div><!--aside종료-->
+
+
+		<!--top buttom-->
+		<div id="top">
+			<div class="wrapper">
+				<div>
+					<div><span class="scroll_bar"></span></div><!--바-->
+					<div class="topBtn">
+						<div>scroll</div><!--scroll-->
+						<div></div><!--따릉이사진-->
+					</div>
+				</div><!--top버튼 덩어리-->
+			</div>
+		</div>
+
+
+		<!--푸터-->
+		<div id="footer">
+			<div class="wrapper">
+				<div><img src="./img/iseoulu.png"></div>
+				<div>
+					<span>서울특별시 대표자 서정협 | 서울특별시 중구 세종대로 110<br>Tel : 1599-0120 (사업자등록번호 : 104-83-00469)</span><br><br>
+					<span>copyright &copy; 2020 bikeseoul All RIGHTS RESERVED.</span>
+				</div>
+				<div>
+					<a href="#"><span>이용약관</span></a> &nbsp; | &nbsp; <a href="#"><span>개인정보처리방침</span></a> &nbsp; | &nbsp; <a href="#"><span>보험안내</span></a> &nbsp; | &nbsp; <a href="#"><span>도움주신 분들</span></a>
+				</div>
+				<div class="clearfix">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div><!--sns-->
+				<div><span>COPYRIGHT &copy; 2020 <i class="fa fa-smile-o" aria-hidden="true"></i> Hong Sangah All RIGHTS RESERVED.<br>[ sangah1116@naver.com ]</span></div>
+			</div><!--wrapper-->
+		</div><!--푸터-->
+
+
+	</body>
+</html>
