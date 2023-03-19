@@ -1,0 +1,1301 @@
+@charset'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);﻿
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'paybooc-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*초기화*/
+* {margin:0;padding:0;}
+ul,li {list-style:none;}
+a {color:#333;text-decoration:none;}
+img {border:0;vertical-align:bottom;}
+input {outline:0;}
+
+/*공통*/
+.wrapper {
+  margin:0 auto;
+  width:1080px;
+}
+.wrapper100 {
+  margin:0 auto;
+  width:100%;
+}
+.wrapper:after {
+	content:'';
+	clear:both;
+	height:0;
+	display:block;
+}
+.clearfix:after {
+	content:'';
+	clear:both;
+	height:0;
+	display:block;
+}
+body {
+	/*background:#30e291;*/
+	font-family: 'Quicksand','S-CoreDream-4Regular';
+  color:#333;
+}
+
+
+/**************************************
+메인 페이지 style
+
+***************************************/
+
+/*헤더*/
+
+/*헤더배너 시작*/
+
+.headBanner {
+  background:#7c49ff;
+  width:100%;
+  height:50px;
+}
+.headBanner > .wrapper {
+  position:relative;
+}
+.headBanner > .wrapper > div {
+  background:#7c49ff;
+  height:50px;
+  position:absolute;
+  top:0;
+  left:0;
+  margin:0 auto;
+}
+/*배너 닫기버튼*/
+.headBanner > .wrapper > div > div:nth-child(2) {
+	width:35px;
+	height:35px;
+	position:absolute;
+	top:8px;
+	right:0;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+	font-size:20px;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.5); /*css3 i10이상부터 가능*/
+	border-radius:100%;
+	cursor:pointer;
+}
+.headBanner > .wrapper > div > div:nth-child(2):hover {
+  color:#30e291;
+}
+/*체크박스*/
+.headBanner > .wrapper > div > div:nth-child(3) > input {
+  position:absolute;
+  top:22px;
+  right:141px;
+}
+/*하루동안 보지않기*/
+.headBanner > .wrapper > div > div:nth-child(3) > div {
+  font-family: 'NanumSquare';
+  color:#fff;
+  position:absolute;
+  top:22px;
+  right:40px;
+  font-size:12px;
+}
+/*헤더배너 끝*/
+
+
+/*lnb & 팝업창 시작*/
+#header > div:nth-child(2) {
+	background:#fff;
+}
+#header > div:nth-child(2) > .wrapper {
+	position:relative;
+}
+#header > div:nth-child(2) > .wrapper > .lnb {
+	position:absolute; /*부모요소가 자손요소의 높이를 정함*/
+	top:0;
+	right:0;
+}
+#header > div:nth-child(2) > .wrapper > .lnb > li {
+	float:left;
+}
+#header > div:nth-child(2) > .wrapper > .lnb > li > a {
+	display:block;
+	padding:10px 10px;
+	height:50px;
+	line-height:50px;
+	font-size:15px;
+  font-weight:bold;
+  transition:all 0.2s;
+}
+#header > div:nth-child(2) > .wrapper > .lnb > li:hover > a {
+  color:#30e291;
+}
+/*lnb & 팝업창 끝*/
+
+
+/*로고 시작*/
+#header > div:nth-child(3) > .wrapper > h1 {
+	text-indent:-9999px;
+}
+#header > div:nth-child(3) > .wrapper > div:nth-child(2) {
+	width:130px;
+  margin:0 auto;
+	/*block 요소의 가운데정렬*/
+	padding-bottom:30px;
+}
+#header > div:nth-child(3) > .wrapper > div:nth-child(2) > img {
+  width:100%;
+}
+/*로고 끝*/
+
+
+/*GNB & 검색창 시작*/
+#header > div:nth-child(4) {
+	background:#30e291;
+}
+#header > div:nth-child(4) > .wrapper {
+	text-align:center;
+	background:#30e291;
+	position:relative;
+	height:60px;
+}
+/*햄버거 메뉴 버튼*/
+#header > div:nth-child(4) > .wrapper > div:nth-child(1) {
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	right:0;
+  margin-right:10px;
+	line-height:50px;
+	font-size:35px;
+  color:#fff;
+  cursor:pointer;
+  transition:all 0.2s;
+	/*font-awesome bars 아이콘은 텍스트성질을 가지고 있기때문에 텍스트 디자인 주는거랑 똑같이!!
+	  inline 성질!!!!! */
+}
+#header > div:nth-child(4) > .wrapper > div:nth-child(1):hover {
+  color:#7c49ff;
+}
+/*검색창을 감싸고 있는 div박스*/
+#header > div:nth-child(4) > .wrapper > div:nth-child(2) {
+	width:300px;
+	height:40px;
+	background:#fff;
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	right:50%;
+  margin-right:-150px;
+	text-align:center;
+  border-radius:30px;
+	/*inline-block이라 text-align:center가 상속되어있기때문에
+	left로 변경해준것임
+	*/
+}
+/*검색 input창*/
+#header > div:nth-child(4) > .wrapper > div:nth-child(2) > input {
+	display:inline-block;
+	width:230px;
+	height:40px;
+	margin:0;/*생략가능 전체선택자에서 이미 초기화 했기때문에~*/
+	padding:0;/*생략가능*/
+	border:0;
+	/*padding-left:10px; /*div랑 input창을 조금 띄어줌*/
+}
+/*검색 돋보기 아이콘*/
+#header > div:nth-child(4) > .wrapper > div:nth-child(2) > div {
+	width:40px;
+	height:40px;
+	background:transparent;
+	position:absolute;
+	top:0;
+	right:5px; /*위치잡는 방법->absolute써도되고 float써도됨*/
+	text-align:center; /*'검색'가운데정렬*/
+	line-height:40px; /*'검색'가운데정렬*/
+	cursor:pointer;
+	color:#30e291;
+	font-size:20px;
+	/*font-awesome 돋보기모양 아이콘은 텍스트성질을 가지고 있기때문에 텍스트 디자인 주는거랑 똑같이*/
+}
+#header > div:nth-child(4) > .wrapper > div:nth-child(2) > div:hover {
+  color:#7c49ff;
+}
+/*GNB & 검색창 끝*/
+
+.sticky {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+}
+
+
+
+/*메인슬라이더 시작*/
+/* #slider {
+	position:relative;
+  width:100%;
+  min-width:1080px;
+}
+#slider div:nth-child(1) {
+  width:100%;
+  height:621px;
+  margin:0 auto;
+}
+#slider div:nth-child(1) > div:nth-child(1) > img {
+  width:100%;
+} */
+/*보러가기 텍스트 버튼*/
+#slider .bxslider > div > span:nth-child(2) {
+  position:absolute;
+  top:50%;
+  margin-top:40px;
+  left:50%;
+  margin-left:-110px;
+  display:block;
+  color:#425563;
+  font-family:'NanumSquare';
+  font-size:15pt;
+  font-weight:bold;
+}
+/* #slider div:nth-child(1) > div:nth-child(2) > span {
+  display:block;
+  color:#425563;
+  font-family:'NanumSquare';
+  font-size:15pt;
+  font-weight:bold;
+} */
+
+/*슬라이더 버튼들*/
+/* #slider {
+  position:relative;
+}
+#slider > div:nth-child(2) > div {
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:50%;
+	margin-top:-60px;
+	font-size:80px;
+  color:#222;
+  z-index:9999;
+}
+#slider > div:nth-child(2) > div:nth-child(1) {
+	left:250px;
+}
+#slider > div:nth-child(2) > div:nth-child(2) {
+	right:250px;
+} */
+/*메인슬라이더 끝*/
+
+
+
+
+/*콘텐츠 박스들 시작*/
+#content1 {
+  background:#fff;
+  padding:50px 50px;
+  margin:90px 0 350px 0;
+}
+/*연두색배경박스*/
+#content1 > .wrapper100 {
+  position:relative;
+}
+#content1 > .wrapper100 > div:nth-child(2) {
+  width:100%;
+  height:700px;
+  background:#eff7cf;
+  border-radius:400px;
+  position:absolute;
+  top:0px;
+  left:-600px;
+}
+
+/*타이틀*/
+#content1 > .wrapper100 {
+  position:relative;
+}
+#content1 > .wrapper100 > div:nth-child(1) {
+  position:absolute;
+  top:60px;
+  left:50%;
+  margin-left:-65px;
+  z-index:2222;
+}
+#content1 > .wrapper100 > div:nth-child(1) > div {
+  width:60px;
+  height:60px;
+  margin:0 auto;
+}
+#content1 > .wrapper100 > div:nth-child(1) > div > img {
+  width:100%;
+}
+#content1 > .wrapper100 > div:nth-child(1) > h2 {
+	padding-bottom:30px;
+	text-align:center;
+}
+#content1 > .wrapper {
+  position:relative;
+  height:400px;
+}
+
+/*뉴스박스들*/
+#content1 > .wrapper > div {
+  position:absolute;
+  top:60%;
+}
+#content1 > .wrapper > div > div {
+  float:left;
+  width:330px;
+  height:350px;
+  background:#fff;
+  margin-right:40px;
+  box-shadow:4px 5px 25px 8px rgba(2,2,2,0.2);
+  cursor:pointer;
+  transform:scale(1);
+  overflow:hidden;
+  position:relative;
+}
+#content1 > .wrapper > div > div:hover {
+  transform:scale(1.1);
+}
+/* #content1 > .wrapper > div > div:hover {
+  animation:ani1 0.4s linear;
+  animation-iteration-count:1;
+  box-shadow:500px 500px 0px 0px rgba(61,220,132,1) inset;
+} */
+
+#content1 > .wrapper > div > div:nth-child(3) {
+  margin-right:0px;
+}
+#content1 > .wrapper > div > div > span {
+  position:absolute;
+}
+#content1 > .wrapper > div > div > span:nth-child(1) {
+  color:#333;
+  font-size:30px;
+  line-height:1.6;
+  left:30px;
+  top:60px;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+  z-index:1111;
+}
+#content1 > .wrapper > div > div > span:nth-child(3) {
+  color:#3ddc84;
+  font-size:20px;
+  line-height:1.5;
+  left:30px;
+  bottom:50px;
+  font-family: 'NEXON Lv1 Gothic OTF Bold';
+  z-index:1111;
+}
+#content1 > .wrapper > div > div:hover > span:nth-child(3) {
+  color:#fff;
+}
+#content1 > .wrapper > div > div:nth-child(2) > span:nth-child(3) {
+  padding-top:20px;
+}
+.bg {
+  position:absolute;
+  bottom:-150px;
+  left:-100px;
+  width:0px;
+  height:0px;
+  overflow:hidden;
+  border-radius:100%;
+  background:rgba(61,220,132,1);
+  opacity:1;
+}
+
+
+/*aside이지만 gnb로 쓸거임 시작*/
+#aside {
+	width:400px;
+	height:100%; /*절대값, 브라우저 기준으로 잡힘*/
+	background:#7c49ff;
+  opacity:0.9;
+	position:fixed; /*위치:브라우저 기준 absolute는 문서기준*/
+	top:0;
+	right:-500px;
+	z-index:9999;
+}
+/*aisde 버튼*/
+#aside > div:nth-child(5) {
+	width:30px;
+	height:40px;
+	position:absolute;/*검은색박스를 기준으로함*/
+	top:50%;
+	margin-top:-40px;
+	left:-30px;
+	background:#7c49ff;
+	cursor:pointer;
+  display:none;
+}
+
+/*닫기버튼*/
+#aside > div:nth-child(1) {
+  position:absolute;
+  top:60px;
+  right:50px;
+  color:#fff;
+}
+#aside > div:nth-child(1) {
+  color:#fff;
+  font-size:35px;
+  cursor:pointer;
+}
+#aside > div:nth-child(1):hover {
+  color:#30e291;
+}
+
+#aside > div:nth-child(2) {
+  width:100px;
+  position:absolute;
+  top:60px;
+  left:50px;
+}
+#aside > div:nth-child(2) > img {
+  width:100%;
+}
+
+/*메뉴들*/
+#aside > div:nth-child(3) > ul {
+  margin-top:200px;
+  height:550px;
+  overflow:hidden;
+}
+#aside > div:nth-child(3) > ul > li {
+  padding-bottom:50px;
+}
+#aside > div:nth-child(3) > ul > li > a {
+  color:#fff;
+  font-size:25px;
+  padding-left:70px;
+}
+#aside > div:nth-child(3) > ul > li:hover > a {
+  color:#30e291;
+}
+
+/*중첩메뉴들(2depth)*/
+#aside > div:nth-child(3) > ul > li > ul {
+  height:0;
+  padding:0px 0 0 70px;
+}
+#aside > div:nth-child(3) > ul > li > ul > li {
+  line-height:1.6;
+  margin-bottom:10px;
+  display:none;
+  transform:scale(1);
+}
+#aside > div:nth-child(3) > ul > li > ul > li:hover {
+  transform:scale(1.01);
+}
+#aside > div:nth-child(3) > ul > li > ul > li > a {
+  color:#fff;
+}
+
+/*ul에 넣을 addClass*/
+/* .gnbOpen {
+  padding-top:20px;
+  height:100%;
+}
+.liOpen {
+  display:block;
+} */
+/*************************************/
+#aside > div:nth-child(4) {
+  width:340px;
+  height:2px;
+  background:#eee;
+  margin-left:30px;
+}
+
+
+/*고장,방치신고버튼*/
+#aside > ul:nth-child(5) {
+  position:absolute;
+  left:20%;
+  margin-left:-15px;
+  bottom:100px;
+
+}
+#aside > ul:nth-child(5) > li {
+  float:left;
+  margin-right:30px;
+  border:2px solid #fff;
+  border-radius:20px;
+  padding:10px 20px 10px 20px;
+  transition:all 0.3s;
+  cursor:pointer;
+}
+#aside > ul:nth-child(5) > li:hover {
+  background-color:#30e291;
+}
+#aside > ul:nth-child(5) > li > span {
+  font-size:20px;
+  color:#fff;
+  width:100%;
+}
+
+/*aside-gnb 끝*/
+
+
+
+/*popup 시작*/
+#popup {
+	width:365px;
+	height:435px;
+	position:absolute;
+	top:100px;
+	left:-200px;
+	z-index:9999;
+  display:block;
+}
+#popup > div:nth-child(1) {
+	width:400px;
+  position:absolute;
+  top:-15px;
+  left:-15px;
+}
+#popup > div > a > img {
+  width:100%;
+}
+#popup > div:nth-child(2) {
+  position:absolute;
+  right:140px;
+  bottom:30px;
+}
+#popup > div:nth-child(2) > input {
+  /* position:absolute;
+  bottom:36px;
+  right:200px; */
+  display:inline-block;
+  margin-right:2px;
+  margin-bottom:2px;
+}
+#popup > div:nth-child(2) > div:nth-child(2) {
+  /* position:absolute;
+  bottom:33px;
+  right:84px; */
+  font-family:'NanumSquare';
+  color:#333;
+  font-size:14px;
+  display:inline-block;
+  font-weight:bold;
+}
+#popup > div:nth-child(3) {
+  color:#222;
+	position:absolute; /*inline에 absolute쓰는 순간 블럭으로 바뀜, block으로 안바꿔줘도됨*/
+	bottom:25px;
+	right:110px;
+  font-size:25px;
+  cursor:pointer;
+}
+/* #popup > div:nth-child(3):hover {
+  color:#fff;
+} */
+/*popup 끝*/
+
+
+/*content2 인스타그램 시작*/
+#content2 {
+  width:100%;
+}
+#content2 > .wrapper {
+  width:100%;
+  height:550px;
+  background:#e6e6e4;
+}
+.insta_bxslider > div { /*썸네일들*/
+	width:100%;
+	float:left;
+	cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+.insta_bxslider > div > div:nth-child(1) > img {
+	width:100%;
+  transform:scale(1);
+  transition:all 0.4s;
+}
+.insta_bxslider div:hover > div:nth-child(1) > img {
+	transform:scale(1.2);
+}
+.insta_bxslider div > div:nth-child(2) {
+  width:100%;
+  height:100%;
+  background:rgba(1,1,1,0.5);
+  color:#fff;
+  font-size:16px;
+  line-height:250px;
+  position:absolute;
+  top:0;
+  left:0;
+  transition:all 0.2s;
+  opacity:0;
+  text-align:center;
+}
+.insta_bxslider div > div:nth-child(2) > span {
+
+}
+.insta_bxslider div:hover > div:nth-child(2) {
+  opacity:1;
+}
+
+#content2 > .wrapper > ul {
+  padding:80px 0 60px 0;
+  text-align:center;
+}
+#content2 > .wrapper > ul > ul {
+  width:60px;
+  height:60px;
+  margin:0 auto;
+}
+#content2 > .wrapper > ul > ul > img {
+  width:100%;
+}
+#content2 > .wrapper > ul > h2 {
+	padding-bottom:10px;
+	text-align:center;
+}
+/*content2 이미지+텍스트박스 (인스타 넣을 거임) 끝*/
+
+
+
+/*content3 width:100%;변칙 시작*/
+#content3 > .wrapper {
+	width:100%;
+	min-width:1080px; /*화면 줄였을때 더 이상 줄지않게 거는것, (wrapper에 갖혀있는)다른 요소랑 밸런스 맞게 함*/
+}
+#content3 > .wrapper > div > div {
+  float:left;
+	width:50%;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+#content3 > .wrapper > div > div > img {
+  width:100%;
+	height:100%;
+  transform:scale(1);
+  transition:all 0.5s;
+}
+#content3 > .wrapper > div > div:hover > img {
+  transform:scale(1.2);
+}
+#content3 > .wrapper > div > div > div:nth-child(2) {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  transition:all 0.4s;
+  box-shadow:0px 0px 0px 0px rgba(1,1,1,0.6) inset
+  opacity:0;
+}
+#content3 > .wrapper > div > div:hover > div:nth-child(2) {
+  opacity:1;
+  box-shadow:0px 0px 0px 300px rgba(1,1,1,0.6) inset
+}
+
+#content3 > .wrapper > div > div > div:nth-child(3) {
+  position:absolute;
+  top:50%;
+  margin-top:-20px;
+}
+#content3 > .wrapper > div:nth-child(1) > div > div:nth-child(3) {
+  left:50%;
+  margin-left:20px;
+  text-align:right;
+}
+#content3 > .wrapper > div:nth-child(2) > div > div:nth-child(3) {
+  right:50%;
+  margin-right:40px;
+  text-align:left;
+}
+#content3 > .wrapper > div > div > div:nth-child(3) > span {
+  display:inline-block;
+	cursor:pointer;
+	font-size:15px;
+  color:#fff;
+}
+#content3 > .wrapper > div > div > div:nth-child(3) > span:nth-child(1) {
+  font-size:30px;
+  font-weight:bold;
+
+}
+#content3 > .wrapper > div > div > div:nth-child(3) > span:nth-child(3) {
+  font-size:20px;
+  margin-top:10px;
+
+}
+/*content3 width:100%;변칙 끝*/
+
+
+/*content4 유튜브 영상 시작*/
+
+#content4 > .wrapper {
+  position:relative;
+}
+/*
+ #content4 > .wrapper > div:nth-child(2) > iframe {
+	width:1080px; }
+	height:608px; /*1080을 25로 나눈다음 *9함 (왜냐면 영상비율이16:9라서)*/
+
+/*유튜브 담는 박스*/
+#content4 > .wrapper {
+  width:100%;
+  height:950px;
+  /*background:url('../img/pattern-bg.jpg') no-repeat;
+  background-size:cover;*/
+  background:#30e291;
+  min-width:1080px;
+}
+#content4 > .wrapper > div:nth-child(2) {
+  width:1080px;
+  margin:0 auto;
+}
+#content4 > .wrapper > div:nth-child(2) > div {
+	width:100%;
+	padding-top:56.25%;
+	background:#222;
+	position:relative;
+}
+#content4 > .wrapper > div:nth-child(2) > div > iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+#content4 > .wrapper > ul {
+  padding:80px 0 60px 0;
+  text-align:center;
+}
+#content4 > .wrapper > ul > ul {
+  width:60px;
+  height:60px;
+  margin:0 auto;
+}
+#content4 > .wrapper > ul > ul > img {
+  width:100%;
+}
+#content4 > .wrapper > ul > h2 {
+	text-align:center;
+}
+
+/*content4 유튜브 영상 끝*/
+
+
+
+#mini {
+  background:#855bf3;
+  width:100%;
+  height:170px;
+}
+#mini > .wrapper > div {
+  margin:0 auto;
+  text-align:center;
+  line-height:150px;
+  width:780px;
+}
+#mini > .wrapper > div > div {
+  width:80px;
+  height:80px;
+  float:left;
+  margin:30px 150px 20px 0;
+  cursor:pointer;
+  transform:scale(1);
+  transition:all 0.2;
+}
+#mini > .wrapper > div > div:hover {
+  transform:scale(1.1);
+}
+#mini > .wrapper > div > div:nth-child(1) {
+  background:url('../img/rental.png');
+  background-size:cover;
+  background-position:center;
+}
+#mini > .wrapper > div > div:nth-child(2) {
+  background:url('../img/rental2.png');
+  background-size:cover;
+  background-position:center;
+}
+#mini > .wrapper > div > div:nth-child(3) {
+  background:url('../img/rental3.png');
+  background-size:cover;
+  background-position:center;
+}
+#mini > .wrapper > div > div:nth-child(4) {
+  background:url('../img/return.png');
+  background-size:cover;
+  background-position:center;
+  margin-right:0;
+}
+#mini > .wrapper > div > div > span {
+  color:#fff;
+  padding-top:30px;
+  display:inline-block;
+}
+
+/*content5 tab 시작*/
+#content5 {
+	padding:100px 0 150px;
+  background:url('../img/pattern-bg-small.jpg');
+}
+#content5 > .wrapper > div > div:nth-child(1) { /*버튼들!!*/
+	text-align:center;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul {
+	display:inline-block;
+	vertical-align:bottom;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul > li {
+	float:left;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul > li > a {
+	display:block;
+	padding:20px 20px;
+  font-size:15px;
+  font-weight:bold;
+  box-sizing:border-box;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+  background:#b7d7e4;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul > li:nth-child(2) > a {
+  background:#9fdabc;
+}
+.active {
+  background:#7c49ff!important;
+  color:#fff!important;
+	/*맨 0순위로 우선으로 정하는거 남발하면 안됨*/
+}
+#content5 > .wrapper > div > div:nth-child(2) {
+  height:100%;
+}
+#content5 > .wrapper > div > div:nth-child(2) > div {/*콘텐츠들!*/
+	width:1080px;
+	height:100%;
+  margin:0 auto;
+	display:none; /*일단! 기본적으로 안보이게 숨겨놓음*/
+}
+#content5 > .wrapper > div > div:nth-child(2) > div:nth-child(1) {
+	display:block; /*숨겨놓은 것들 중에 1번만 보이게 해놓음*/
+}
+#content5 > .wrapper > div > div:nth-child(2) > div > img {
+	width:100%;
+}
+/*제목*/
+#content5 > .wrapper > ul {
+  padding:20px 0;
+  text-align:center;
+}
+#content5 > .wrapper > ul > ul {
+  width:60px;
+  height:60px;
+  margin:0 auto;
+}
+#content5 > .wrapper > ul > ul > img {
+  width:100%;
+}
+#content5 > .wrapper > ul > h2 {
+	padding-bottom:60px;
+	text-align:center;
+}
+/*탭 감싸는 박스*/
+.tab_box {
+  width:100%;
+  background:#b7d7e4;
+}
+/*content5 tab 끝*/
+
+
+
+
+
+/*image attachment 시작*/
+#content6 {
+  padding-top:50px;
+}
+#content6 > .wrapper100 {
+  position:relative;
+}
+#content6 > .wrapper100 > div:nth-child(1) {
+  width:100%;
+  height:700px;
+  background:url('../img/map.jpg') no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+#content6 > .wrapper100 > div:nth-child(2) {
+  width:100%;
+  height:70px;
+  background:rgba(1,1,1,0.7);
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:center;
+  padding-top:20px;
+}
+#content6 > .wrapper100 > div:nth-child(2) > div > div > span {
+  color:#ebebeb;
+  font-size:25px;
+  letter-spacing:normal;
+  margin:30px 0 15px 0;
+  cursor:pointer;
+}
+#content6 > .wrapper100 > div:nth-child(2) > div > div:nth-child(2) {
+  width:30px;
+  height:30px;
+  transform:rotate(90deg);
+  position:absolute;
+  top:7px;
+  right:220px;
+  cursor:pointer;
+}
+#content6 > .wrapper100 > div:nth-child(2) > div > div:nth-child(2) > img {
+  width:100%;
+}
+#content6 > .wrapper100 > div:nth-child(2) > div {
+  width:1080px;
+  height:680px;
+  position:relative;
+  margin:0 auto;
+
+}
+#content6 > .wrapper100 > div:nth-child(2) > div > div {
+  padding-top:5px;
+}
+/*움직이는 자전거*/
+#content6 > .wrapper100 > div:nth-child(2) > div > .bicycle {
+  position:absolute;
+  top:80px;
+  right:-250px;
+  transform:rotateY(180deg);
+}
+
+
+/*content6 image attachment 끝*/
+
+
+
+
+/*TOP버튼*/
+#top > .wrapper {
+  position:relative;
+}
+#top > .wrapper > div {
+  position:fixed;
+  height:350px;
+  width:100px;
+  bottom:-15px;
+  left:80px;
+}
+#top > .wrapper > div > div:nth-child(1) {
+  width:3px;
+  height:250px;
+  background:#bbb;
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-right:-5px;
+}
+#top > .wrapper > div > div:nth-child(1) > .scroll_bar {
+  width:3px;
+  height:0px;
+  background:#293795;
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+}
+#top > .wrapper > div > div:nth-child(2) {
+  position:absolute;
+  top:0;
+  left:0;
+}
+#top > .wrapper > div > div:nth-child(2) > div:nth-child(1) {
+  position:absolute;
+  font-weight:bold;
+  top:10px;
+  left:-18px;
+  width:80px;
+  height:20px;
+
+}
+#top > .wrapper > div > div:nth-child(2) > div:nth-child(2) {
+  width:50px;
+  height:50px;
+  background:url('../img/icon2.png') no-repeat;
+  background-size:contain;
+  position:absolute;
+  top:-30px;
+  left:-20px;
+  cursor:pointer;
+}
+
+
+
+/*푸터 시작*/
+#footer {
+  height:280px;
+  width:100%;
+	color:#fff;
+	background:#7c49ff;
+  min-width:1080px;
+}
+#footer > .wrapper {
+  position:relative;
+}
+#footer > .wrapper > div:nth-child(1) {
+  width:200px;
+  position:absolute;
+  top:70px;
+  left:0;
+}
+#footer > .wrapper > div:nth-child(1) > img {
+  width:100%;
+  cursor:pointer;
+}
+#footer > .wrapper > div:nth-child(2) {
+  position:absolute;
+  top:140px;
+  left:0px;
+  font-size:13px;
+  line-height:1.6;
+}
+#footer > .wrapper > div:nth-child(3) {
+  position:absolute;
+  right:10px;
+  top:140px;
+}
+#footer > .wrapper > div:nth-child(3) > a > span {
+  color:#fff;
+  font-size:13px;
+}
+#footer > .wrapper > div:nth-child(4) {
+  position:absolute;
+  top:70px;
+  right:0;
+}
+#footer > .wrapper > div:nth-child(4) > div {
+  float:left;
+  width:50px;
+  height:50px;
+  margin-right:10px;
+  cursor:pointer;
+}
+#footer > .wrapper > div:nth-child(4) > div:nth-child(1) {
+  background:url('../img/facebook.png') no-repeat;
+  background-size:contain;
+}
+#footer > .wrapper > div:nth-child(4) > div:nth-child(2) {
+  background:url('../img/instagram.png') no-repeat;
+  background-size:contain;
+}
+#footer > .wrapper > div:nth-child(4) > div:nth-child(3) {
+  background:url('../img/blog.png') no-repeat;
+  background-size:contain;
+  margin-right:0;
+}
+#footer > .wrapper > div:nth-child(5) {
+  position:absolute;
+  right:10px;
+  top:180px;
+  text-align:right;
+}
+#footer > .wrapper > div:nth-child(5) > span {
+  color:#aaa;
+  font-size:10pt;
+}
+/*푸터 끝*/
+
+
+/**************************************
+로그인 페이지 style
+
+***************************************/
+input {
+  outline:0;
+  vertical-align:bottom;
+  display:inline-block;
+  padding:12px 12px;
+  border:1px solid #ccc;
+  border-radius:10px;
+}
+/*로그인타이틀*/
+#login {
+  margin:60px 0 150px;
+}
+#login > .wrapper > div:nth-child(1) {
+  padding:20px 0;
+  text-align:center;
+}
+#login > .wrapper > div:nth-child(1) > div {
+  width:40px;
+  height:40px;
+  margin:0 auto;
+}
+#login > .wrapper > div:nth-child(1) > div > img {
+  width:100%;
+}
+#login > .wrapper > div:nth-child(1) > h3 {
+	padding-bottom:30px;
+	text-align:center;
+}
+/*로그인박스*/
+#login > .wrapper > div:nth-child(2) {
+  width:600px;
+  height:370px;
+  background:#eff7cf;
+  border-radius:30px;
+  margin:0 auto;
+  position:relative;
+}
+#login > .wrapper > div:nth-child(2) > form > div {
+  position:absolute;
+  left:25%;
+}
+#login > .wrapper > div:nth-child(2) > form > div > span {
+  font-size:16px;
+  margin-right:30px;
+  display:inline-block;
+}
+/*아이디*/
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(1) {
+  top:50px;
+  left:28%;
+}
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(1) > span {
+  font-size:16px;
+  line-height:37px;
+}
+/*비번*/
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(2) {
+  top:100px;
+  left:28%;
+  margin-left:-15px;
+}
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(2) > span {
+  font-size:16px;
+  line-height:37px;
+}
+/*로그인상태유지*/
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(3) {
+  top:160px;
+  left:50%;
+}
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(3) > input {
+  margin-right:10px;
+  margin-bottom:3px;
+}
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(3) > span {
+  font-size:14px;
+}
+/*로그인버튼*/
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(4) {
+  top:210px;
+  left:24%;
+}
+input[type="button"] {
+  padding:13px 132px;
+  background:#3ddc84;
+  border:0;
+  cursor:pointer;
+  border-radius:10px;
+  font-size:14px;
+  font-family:'S-CoreDream-4Regular';
+}
+input[type="submit"]:hover {
+  color:#fff;
+}
+/*회원가입등*/
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(5) {
+  bottom:40px;
+  left:24%;
+}
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(5) > span {
+  font-size:13px;
+}
+#login > .wrapper > div:nth-child(2) > form > div:nth-child(5) > span:hover > a {
+  color:#3ddc84;
+}
+/*sns로그인*/
+#login > .wrapper > div:nth-child(3) {
+  margin:60px auto;
+  width:100%;
+  text-align:center;
+  position:relative;
+}
+#login > .wrapper > div:nth-child(3) > div:nth-child(1) > div {
+  width:500px;
+  height:2px;
+  margin:0 auto;
+  background:#ccc;
+}
+#login > .wrapper > div:nth-child(3) > div:nth-child(1) > span {
+  position:absolute;
+  top:-9px;
+  left:45%;
+  background:#fff;
+  padding:0 15px;
+  font-weight:bold;
+}
+/*sns로고들*/
+#login > .wrapper > div:nth-child(3) > div:nth-child(2) {
+  margin:0 auto;
+  width:1080px;
+}
+#login > .wrapper > div:nth-child(3) > div:nth-child(2) > div {
+  display:inline-block;
+  vertical-align:bottom;
+}
+#login > .wrapper > div:nth-child(3) > div:nth-child(2) > div > div {
+  float:left;
+  width:50px;
+  padding-right:50px;
+  margin-top:50px;
+}
+#login > .wrapper > div:nth-child(3) > div:nth-child(2) > div > div:last-child {
+  padding-right:0;
+}
+#login > .wrapper > div:nth-child(3) > div:nth-child(2) > div > div > img {
+  width:100%;
+  cursor:pointer;
+}
+/******************************************
+addClass
+******************************************/
+.grayText {
+  color:#ccc;
+}
+.border{
+  border:1px solid #222 !important;
+}
+/*따릉이 끝*/

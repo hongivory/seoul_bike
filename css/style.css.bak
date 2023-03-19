@@ -1,0 +1,572 @@
+@charset'UTF-8';
+
+* {
+	margin:0;
+	padding:0;
+}
+ul,li {
+	list-style:none;
+}
+a {
+	color:#333;
+	text-decoration:none;
+}
+img {
+	border:0;
+	vertical-align:bottom;
+}
+input {
+	outline:0;
+}
+ 
+/*연결확인*/
+/*body {*/
+	/*background:red;*/
+/*}*/
+
+/*공통*/
+.wrapper {
+	width:1080px;
+	margin:0 auto;
+}
+.clearfix:after {
+	content:'';
+	clear:both;
+	height:0;
+	display:block;
+}
+.wrapper:after {
+	content:'';
+	clear:both;
+	height:0;
+	display:block;
+}
+
+/*헤더*/
+
+/*헤더배너추가시작*/
+#header > div:nth-child(1) {
+	background:#d7d7d7;
+}
+#header > div:nth-child(1) > .wrapper {
+	position:relative;
+}
+#header > div:nth-child(1) > .wrapper > div {/*버튼*/
+	width:40px;
+	height:40px;
+	background:red;
+	position:absolute;
+	top:0;
+	right:0;
+	text-align:center;
+	line-height:40px;
+	color:#ccc;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.5); /*css3 i10이상부터 가능*/
+	border-radius:100%;
+	cursor:pointer;
+}
+/*헤더배너추가끝*/
+
+
+#header > div:nth-child(2) {
+	background:#999;
+}
+#header > div:nth-child(2) > .wrapper {
+	position:relative;
+	height:50px;
+}
+#header > div:nth-child(2) > .wrapper > .lnb {
+	position:absolute; /*부모요소가 자손요소의 높이를 정함*/
+	top:0;
+	right:0;
+}
+#header > div:nth-child(2) > .wrapper > .lnb > li {
+	float:left;
+}
+#header > div:nth-child(2) > .wrapper > .lnb > li > a {
+	display:block;
+	padding:0 15px;
+	height:50px;
+	line-height:50px;
+	font-size:12px;
+}
+#header > div:nth-child(3) > .wrapper > h1 {
+	width:250px;
+	height:100px;
+	background:#888;
+	/*block 요소의 가운데정렬*/
+	margin:0 auto; /*h1의 가운데정렬*/
+	text-align:center; /*text의 가운데정렬*/
+	line-height:100px;
+	font-size:30px;
+}
+#header > div:nth-child(4) {
+	background:#777;
+}
+#header > div:nth-child(4) > .wrapper {
+	text-align:center;
+	background:red;
+	position:relative;
+}
+#header > div:nth-child(4) > .wrapper > #gnb {
+	background:#777;
+	display:inline-block;
+	vertical-align:bottom;
+}
+#header > div:nth-child(4) > .wrapper > #gnb > li {
+	float:left;
+}
+#header > div:nth-child(4) > .wrapper > #gnb > li > a {
+	display:block;
+	padding:0 20px;
+	height:70px;
+	line-height:70px;
+	font-size:15px;
+}
+
+#header > div:nth-child(4) > .wrapper > div:nth-child(1) {
+	width:50px;
+	height:50px;
+	background:blue;
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	left:0;
+	line-height:50px;
+	font-size:30px;
+	/*font-awesome bars 아이콘은 텍스트성질을 가지고 있기때문에 텍스트 디자인 주는거랑 똑같이!!
+	  inline 성질!!!!! */
+}
+#header > div:nth-child(4) > .wrapper > div:nth-child(3) {
+	width:200px;
+	height:50px;
+	background:#fff;
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	right:0;
+	text-align:left; 
+	/*inline-block이라 text-align:center가 상속되어있기때문에
+	left로 변경해준것임 
+	*/
+}
+#header > div:nth-child(4) > .wrapper > div:nth-child(3) > input {
+	display:inline-block;
+	width:140px;
+	height:50px;
+	margin:0;/*생략가능 전체선택자에서 이미 초기화 했기때문에~*/
+	padding:0;/*생략가능*/
+	border:0; 
+	padding-left:10px; /*div랑 input창을 조금 띄어줌*/
+}
+#header > div:nth-child(4) > .wrapper > div:nth-child(3) > div {
+	width:50px;
+	height:50px;
+	background:transparent;
+	position:absolute;
+	top:0;
+	right:0; /*위치잡는 방법->absolute써도되고 float써도됨*/
+	text-align:center; /*'검색'가운데정렬*/
+	line-height:50px; /*'검색'가운데정렬*/
+	cursor:pointer;
+	color:blue;
+	font-size:20px; 
+	/*font-awesome 돋보기모양 아이콘은 텍스트성질을 가지고 있기때문에 텍스트 디자인 주는거랑 똑같이*/
+}
+
+
+/*슬라이더*/
+#slider > .wrapper {
+	position:relative; /*빨간박스의 기준점*/
+}
+#slider > .wrapper > div:nth-child(1) {
+	width:100%; /*==1080px*/
+	height:450px;
+	background:#666;
+}	
+#slider > .wrapper > div:nth-child(2) > div { /*버튼'들'!!!!*/
+	width:40px;
+	height:40px;
+	background:red;
+	position:absolute;
+	top:50%; /*수직*/
+	margin-top:-20px;	
+	/*절대위치의 가운데정렬(수평/수직)*/
+	/* 수평!!
+	left:50%;
+	margin-left:-20px;
+	*/
+	font-size:35px;
+	text-align:center;
+	line-height:40px;
+	/*font-awesome angle 아이콘은 텍스트성질을 가지고 있기때문에 텍스트 디자인 주는거랑 똑같이*/
+	
+}
+#slider > .wrapper > div:nth-child(2) > div:nth-child(1) {
+	left:-80px;
+}
+#slider > .wrapper > div:nth-child(2) > div:nth-child(2) {
+	right:-80px;
+}
+
+/*콘텐츠*/
+
+#content1 > div:nth-child(1) > .wrapper > div { /*div들!*/
+	width:33.333%; /*==350px*/
+	height:350px;
+	background:#999;
+	float:left;
+	box-sizing:border-box; /*css3 ie9+부터 가능 (pc웹에는 사용하면 안됨!!!!-반응형 할때만)*/
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(1) {
+	background:#999;
+	padding:10px;
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(1) > div {
+	width:340px;
+	height:330px;
+	background:#fff;
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(2) {
+	background:#888;
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(2) > div {
+	width:100%;/*==340px; 바로 위 부모요소의 크기를 기준으로 100%*/
+	height:50%; /*==175px;*/
+	background:blue;
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(2) > div:nth-child(2) > div {
+	width:50%;
+	height:100%; /*==175px;*/
+	background:red;
+	float:left;
+	position:relative;
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(2) > div:nth-child(2) > div > div {
+	width:50px;
+	height:50px;
+	background:blue;
+	position:absolute;
+
+	/*절대값의 가운데정렬*/
+	top:50%; /*수직*/
+	margin-top:-25px;
+	left:50%; /*수평*/
+	margin-left:-25px;
+}
+
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(3) {
+	background:#777;
+	position:relative;
+}
+#content1 > div:nth-child(1) > .wrapper > div:nth-child(3) > div {
+	width:50px;
+	height:50px;
+	background:red;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+#content1 > div:nth-child(2) > .wrapper > div {
+	width:25%; /*==270px;*/
+	height:270px;
+	background:#999;
+	float:left;
+	position:relative;
+}
+#content1 > div:nth-child(2) > .wrapper > div:nth-child(1) {
+	background:#999;
+}
+#content1 > div:nth-child(2) > .wrapper > div:nth-child(2) {
+	background:#888;
+}
+#content1 > div:nth-child(2) > .wrapper > div:nth-child(3) {
+	background:#777;
+}
+#content1 > div:nth-child(2) > .wrapper > div:nth-child(4) {
+	background:#666;
+}
+
+#content1 > div:nth-child(2) > .wrapper > div > div { /*빨간색박스*/
+	width:100px;
+	height:100px;
+	background:red;
+	position:absolute; /*절대위치요소의 가운데 정렬*/
+	top:50%;
+	margin-top:-50px;
+	left:50%;
+	margin-left:-50px;
+}
+
+#footer {
+	padding:100px 0;
+	font-size:15px;
+	color:#fff;
+	background:#eee;
+}
+
+
+/*aside*/
+
+#aside {
+	width:270px;
+	height:100%; /*절대값, 브라우저 기준으로 잡힘*/
+	background:#111;
+	position:fixed; /*위치:브라우저 기준 absolute는 문서기준*/
+	top:0;
+	right:-270px;
+	z-index:9999;
+}
+
+#aside > div:nth-child(2) {
+	width:30px;
+	height:80px;
+	position:absolute;/*검은색박스를 기준으로함*/
+	top:50%;
+	margin-top:-40px;
+	left:-30px;
+	background:#111;
+	cursor:pointer; /*포인터를 손가락 모양으로 바꾸는것*/
+}
+
+/*버튼*/
+
+#aside > div:nth-child(1) {
+	padding:20px 0 0 20px;
+	background:red;
+}
+#aside > div:nth-child(1) > div {/*썸네일'들'!*/
+	width:105px;
+	height:105px;
+	background:blue;
+	float:left;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+/*popup*/
+
+#popup {
+	width:450px;
+	height:650px;
+	background:#111;
+	position:absolute;
+	top:0;
+	left:-400px;
+	z-index:9999;
+	padding:15px 15px 0 15px;
+	/*box-sizing:border-box; /*css3, 스탠다드에서는 절대 쓰지 말것*/
+	display:none;
+}
+#popup > div {
+	width:450px;
+	height:570px;
+	background:#fff;
+}
+#popup > span {
+	color:#fff;
+	position:absolute; /*inline에 absolute쓰는 순간 블럭으로 바뀜, block으로 안바꿔줘도됨*/
+	bottom:15px;
+	right:15px;
+}
+
+
+/*추가1 content2*/
+
+#content2 > .wrapper > div:nth-child(2) > div { /*썸네일들*/
+	width:253px;
+	float:left;
+	margin-right:20px;
+	border:1px solid #111;
+	cursor:pointer;
+}
+#content2 > .wrapper > div:nth-child(2) > div:nth-child(4n+4) {
+	margin-right:0;
+}
+#content2 > .wrapper > div:nth-child(2) > div > div:nth-child(1) > img {
+	width:100%;
+}
+#content2 > .wrapper > div:nth-child(2) > div > div:nth-child(2) {
+	text-align:center;
+	padding:20px 10px;
+	/*width가 지정이 안되어있기때문에 안쪽으로 축소되는거임. 그래서 패딩을 넣어도 초과가 안됨*/
+}
+#content2 > .wrapper > div:nth-child(2) > div > div:nth-child(2) > span {
+	line-height:1.6;
+}
+#content2 > .wrapper > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(5) {
+	font-size:13px;
+}
+
+#content2 > .wrapper > h2 {
+	text-align:center;
+	padding:50px 0; /*h2위아래여백*/
+}
+#content2 {
+	padding:50px 0 100px; /*위,좌우,아래*/
+}
+
+
+/*변칙 100%활용 content3*/
+
+#content3 > .wrapper > div {
+	width:50%;
+	float:left;
+	position:relative;
+	cursor:pointer;
+}
+#content3 > .wrapper > div > img {
+	width:100%; /*부모요소의 크기에 따라 결정*/
+}
+#content3 > .wrapper {
+	width:100%;
+	min-width:1080px; /*화면 줄였을때 더 이상 줄지않게 거는것, (wrapper에 갖혀있는)다른 요소랑 밸런스 맞게 함*/
+}
+#content3 > .wrapper > div > div:nth-child(2) {
+	color:#fff;
+	position:absolute;
+	bottom:20%; /*위치는 대부분 밑으로 잡음*/
+	/*margin-bottom:-33px;*/
+	left:0;
+	/*height:66px; /*창을 줄여도 계속 가운데*/
+}
+
+#content3 > .wrapper > div > div:nth-child(2) > div > span:nth-child(1) {
+	font-size:25px;
+}
+#content3 > .wrapper > div:hover > div:nth-child(2) > div > span:nth-child(1) {
+	/*바뀌어야되는 것 먼저 쓰고!!! 마우스를 올려야하는 것에 hover주기*/
+	text-shadow:3px 3px 3px rgba(255,255,255,0.8);	
+}
+
+
+#content3 > .wrapper > div > div:nth-child(2) > span {
+	display:inline-block;
+	padding:15px 20px;
+	border:1px solid #fff;
+	margin-top:50px;
+	cursor:pointer;
+}
+#content3 > .wrapper > div > div:nth-child(2) > span:hover {
+	color:blue;
+	border:1px solid blue;
+}
+
+
+/*유튜브 영상 연결 content4*/
+
+#content4 {
+	padding:100px 0;
+	background:#111;
+}
+#content4 > .wrapper > h2 {
+	color:#fff;
+	text-align:center;
+	padding:0 0 50px;
+}
+
+/*
+ #content4 > .wrapper > div:nth-child(2) > iframe {
+	width:1080px; }
+	height:608px; /*1080을 25로 나눈다음 *9함 (왜냐면 영상비율이16:9라서)*/
+
+#content4 > .wrapper > div {
+	width:100%;
+	padding-top:56.25%;
+	background:red;
+	position:relative;
+}
+#content4 > .wrapper > div > iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+
+/*content5(tab)*/
+
+#content5 {
+	padding:50px 0 100px;
+}
+
+#content5 > .wrapper > div > div:nth-child(1) { /*버튼들!!*/
+	text-align:center;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul {
+	display:inline-block;
+	vertical-align:bottom;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul > li {
+	float:left;
+}
+#content5 > .wrapper > div > div:nth-child(1) > ul > li > a {
+	display:block;
+	padding:20px 30px;
+	border-bottom:3px solid #fff;
+}
+.active {
+	border-bottom:3px solid orange !important; 
+	/*맨 0순위로 우선으로 정하는거 남발하면 안됨*/
+}
+
+#content5 > .wrapper > div > div:nth-child(2) > div {/*콘텐츠들!*/
+	width:100%;
+	height:400px;
+	display:none; /*일단! 기본적으로 안보이게 숨겨놓음*/
+}
+#content5 > .wrapper > div > div:nth-child(2) > div:nth-child(1) {
+	background:red;
+	display:block; /*숨겨놓은 것들 중에 1번만 보이게 해놓음*/
+}
+#content5 > .wrapper > div > div:nth-child(2) > div:nth-child(2) {
+	background:green;
+}
+#content5 > .wrapper > div > div:nth-child(2) > div:nth-child(3) {
+	background:blue;
+}
+
+#content5 > .wrapper > h2 {
+	padding:50px 0;
+	text-align:center;
+}
+
+
+/*navigator*/
+.navigator {
+	position:fixed;
+	top:50%;
+	margin-top:-115px;
+	left:20px;
+	background:red;
+}
+.navigator > li {
+	margin-bottom:20px;
+	position:relative;
+}
+.navigator > li:last-child {
+	margin-bottom:0;
+}
+.navigator > li > a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:blue;
+	border-radius:100%;
+	text-indent:-9999px;/*텍스트 밖으로 뺌*/
+}
+.navigator > li > span {
+	position:absolute;
+	top:0;
+	left:40px;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	opacity:0;
+	transition:all 0.3s;
+}
+.navigator > li:hover > span {
+	opacity:1;
+}
